@@ -45,6 +45,7 @@ public class TestCalculator {
 		driver.findElement(By.id("com.android.calculator2:id/equal")).click();
 		
 		Thread.sleep(3000);
+		
 	}
 	
 	@AfterClass
