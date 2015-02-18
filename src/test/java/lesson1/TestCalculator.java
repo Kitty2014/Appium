@@ -39,9 +39,9 @@ public class TestCalculator {
 		}catch(Exception e){
 			driver.findElement(By.id("com.android.calculator2:id/del")).click();
 		}
-		driver.findElement(By.id("com.android.calculator2:id/digit3")).click();
+		driver.findElement(By.id("com.android.calculator2:id/digit1")).click();
 		driver.findElement(By.id("com.android.calculator2:id/plus")).click();
-		driver.findElement(By.id("com.android.calculator2:id/digit9")).click();
+		driver.findElement(By.id("com.android.calculator2:id/digit2")).click();
 		driver.findElement(By.id("com.android.calculator2:id/equal")).click();
 		
 		Thread.sleep(3000);

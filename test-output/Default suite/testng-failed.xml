@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="lesson1.TestCalculator">
+      <class name="lesson2.TestMeiTuan_1">
         <methods>
           <include name="initalAppiumSettings"/>
-          <include name="plus"/>
+          <include name="realse"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- lesson1.TestCalculator -->
+      </class> <!-- lesson2.TestMeiTuan_1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

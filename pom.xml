@@ -22,7 +22,7 @@
             <artifactId>testng</artifactId>
             <version>6.8</version>
         </dependency>
-  </dependencies>
+ </dependencies>
   
     <build>
   <defaultGoal>complie</defaultGoal>

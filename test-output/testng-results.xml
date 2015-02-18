@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14732" started-at="2015-02-14T10:54:09Z" finished-at="2015-02-14T10:54:24Z">
+  <suite name="Default suite" duration-ms="25599" started-at="2015-02-17T15:24:23Z" finished-at="2015-02-17T15:24:49Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14732" started-at="2015-02-14T10:54:09Z" finished-at="2015-02-14T10:54:24Z">
-      <class name="lesson1.TestCalculator">
-        <test-method status="PASS" signature="initalAppiumSettings()[pri:0, instance:lesson1.TestCalculator@2af21f19]" name="initalAppiumSettings" is-config="true" duration-ms="4453" started-at="2015-02-14T18:54:09Z" finished-at="2015-02-14T18:54:13Z">
+    <test name="Default test" duration-ms="25599" started-at="2015-02-17T15:24:23Z" finished-at="2015-02-17T15:24:49Z">
+      <class name="lesson2.TestMeiTuan_1">
+        <test-method status="PASS" signature="initalAppiumSettings()[pri:0, instance:lesson2.TestMeiTuan_1@7e85132f]" name="initalAppiumSettings" is-config="true" duration-ms="4370" started-at="2015-02-17T23:24:23Z" finished-at="2015-02-17T23:24:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initalAppiumSettings -->
-        <test-method status="PASS" signature="plus()[pri:0, instance:lesson1.TestCalculator@2af21f19]" name="plus" duration-ms="9473" started-at="2015-02-14T18:54:13Z" finished-at="2015-02-14T18:54:23Z">
+        <test-method status="PASS" signature="testDragAndDrop()[pri:0, instance:lesson2.TestMeiTuan_1@7e85132f]" name="testDragAndDrop" duration-ms="20211" started-at="2015-02-17T23:24:27Z" description="swipe left" finished-at="2015-02-17T23:24:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- plus -->
-        <test-method status="PASS" signature="realse()[pri:0, instance:lesson1.TestCalculator@2af21f19]" name="realse" is-config="true" duration-ms="795" started-at="2015-02-14T18:54:23Z" finished-at="2015-02-14T18:54:24Z">
+        </test-method> <!-- testDragAndDrop -->
+        <test-method status="PASS" signature="realse()[pri:0, instance:lesson2.TestMeiTuan_1@7e85132f]" name="realse" is-config="true" duration-ms="1003" started-at="2015-02-17T23:24:48Z" finished-at="2015-02-17T23:24:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- realse -->
-      </class> <!-- lesson1.TestCalculator -->
+      </class> <!-- lesson2.TestMeiTuan_1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
