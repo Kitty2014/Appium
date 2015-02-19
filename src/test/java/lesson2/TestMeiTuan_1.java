@@ -1,48 +1,26 @@
 package lesson2;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidKeyCode;
 
 import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import pages.HomePage;
-import pages.ListItems;
-import pages.LoginPage;
-import utils.Action;
+import utils.TestData;
+import utils.TestSuite;
 
-public class TestMeiTuan_1 {
+public class TestMeiTuan_1 extends TestSuite{
    
-	public AppiumDriver driver;
-	public HomePage homepage;
-	public ListItems listitems;
-	public LoginPage loginpage;
-	public Action au;
+
+	public TestData td;
 	
 	@BeforeClass
-	public void initalAppiumSettings() throws MalformedURLException{
-		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setCapability("platformName", "Android");
-		cap.setCapability("deviceName","Samsung_Galaxy_Note_3" );
-		cap.setCapability("ignoreUnimportantViews","true" );
-		cap.setCapability("newCommandTimeout","180" );
-		
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),cap);
-		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
-		
-		
-		au = new Action(driver);
-		homepage = new HomePage(driver);
-		listitems = new ListItems(driver);
-		loginpage = new LoginPage(driver);
+	public void initalTestCaseSettings() throws MalformedURLException{
+		td = new TestData(System.getProperty("user.dir")+"\\src\\test\\resources\\lesson2\\userinfo.csv");
+
 	}
 	
 	
@@ -61,8 +39,8 @@ public class TestMeiTuan_1 {
 	@Test(description="动态元素")
 	public void getdynamicElements(){ 
        au.click(By.xpath(homepage.getElement(homepage.category, "美食")));       
-       au.click(By.xpath(listitems.firstitem));
-       au.click(By.xpath(listitems.discount));
+       au.click(By.xpath(listitemspage.firstitem));
+       au.click(By.xpath(listitemspage.discount));
 	}
 	
 	
@@ -70,16 +48,16 @@ public class TestMeiTuan_1 {
 	@Test(description="swipe")
 	public void testSwipe(){
 	   au.click(By.xpath(homepage.getElement(homepage.category, "美食")));	       
-	   au.swipe(By.xpath(listitems.firstitem), By.xpath(listitems.discount),false);
-	   au.click(By.xpath(listitems.discount));
+	   au.swipe(By.xpath(listitemspage.firstitem), By.xpath(listitemspage.discount),false);
+	   au.click(By.xpath(listitemspage.discount));
 	}
 	
 	
 	@Test(description="tap")
 	public void testTap(){
 	   au.tap(By.xpath(homepage.getElement(homepage.category, "美食")));	       
-	   au.swipe(By.xpath(listitems.firstitem), By.xpath(listitems.discount),false);
-	   au.tap(By.xpath(listitems.discount));
+	   au.swipe(By.xpath(listitemspage.firstitem), By.xpath(listitemspage.discount),false);
+	   au.tap(By.xpath(listitemspage.discount));
 	}
 	
 	
@@ -100,6 +78,27 @@ public class TestMeiTuan_1 {
 		au.tap(By.id(loginpage.login));
 		
 	}
+	
+	
+	@Test(description="loginwithdatadriver")
+	public void testDataDriver(){
+		au.tap(By.xpath(homepage.mine));
+		
+		if(au.isElementPresented(By.id(homepage.balance))){
+			au.tap(By.id(homepage.balance));
+			au.tap(By.id(homepage.myaccountpage.exit));
+			au.tap(By.xpath(homepage.myaccountpage.logout));
+		}
+		au.tap(By.id(homepage.login));
+		au.setValue(By.id(loginpage.username), td.getTestData("username", "tc1"));
+		au.tap(By.id(loginpage.login));
+		au.setValue(By.id(loginpage.password), td.getTestData("password", "tc1"));
+		au.tap(By.id(loginpage.login));
+	
+		Assert.assertEquals(au.isElementPresented(By.id(homepage.balance)), true);
+		
+	}
+	
 	
 	@AfterClass
 	public void realse(){

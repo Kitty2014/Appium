@@ -91,4 +91,17 @@ public class Action {
 	
 	
 	
+	public boolean isElementPresented(By by){
+		boolean isDisplayed = false;
+		
+		try{
+			isDisplayed = driver.findElement(by).isDisplayed();
+		}catch(Exception e){
+			isDisplayed = false;
+		}
+		return isDisplayed;
+		
+	}
+	
+	
 }

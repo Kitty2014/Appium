@@ -2,20 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25599" started-at="2015-02-17T15:24:23Z" finished-at="2015-02-17T15:24:49Z">
+  <suite name="Default suite" duration-ms="48717" started-at="2015-02-19T09:33:48Z" finished-at="2015-02-19T09:34:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25599" started-at="2015-02-17T15:24:23Z" finished-at="2015-02-17T15:24:49Z">
+    <test name="Default test" duration-ms="48717" started-at="2015-02-19T09:33:48Z" finished-at="2015-02-19T09:34:36Z">
       <class name="lesson2.TestMeiTuan_1">
-        <test-method status="PASS" signature="initalAppiumSettings()[pri:0, instance:lesson2.TestMeiTuan_1@7e85132f]" name="initalAppiumSettings" is-config="true" duration-ms="4370" started-at="2015-02-17T23:24:23Z" finished-at="2015-02-17T23:24:27Z">
+        <test-method status="PASS" signature="AndroidSettings()[pri:0, instance:lesson2.TestMeiTuan_1@44175c06]" name="AndroidSettings" is-config="true" duration-ms="4180" started-at="2015-02-19T17:33:43Z" finished-at="2015-02-19T17:33:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initalAppiumSettings -->
-        <test-method status="PASS" signature="testDragAndDrop()[pri:0, instance:lesson2.TestMeiTuan_1@7e85132f]" name="testDragAndDrop" duration-ms="20211" started-at="2015-02-17T23:24:27Z" description="swipe left" finished-at="2015-02-17T23:24:48Z">
+        </test-method> <!-- AndroidSettings -->
+        <test-method status="PASS" signature="initalTestCaseSettings()[pri:0, instance:lesson2.TestMeiTuan_1@44175c06]" name="initalTestCaseSettings" is-config="true" duration-ms="0" started-at="2015-02-19T17:33:48Z" finished-at="2015-02-19T17:33:48Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testDragAndDrop -->
-        <test-method status="PASS" signature="realse()[pri:0, instance:lesson2.TestMeiTuan_1@7e85132f]" name="realse" is-config="true" duration-ms="1003" started-at="2015-02-17T23:24:48Z" finished-at="2015-02-17T23:24:49Z">
+        </test-method> <!-- initalTestCaseSettings -->
+        <test-method status="PASS" signature="testDataDriver()[pri:0, instance:lesson2.TestMeiTuan_1@44175c06]" name="testDataDriver" duration-ms="47421" started-at="2015-02-19T17:33:48Z" description="loginwithdatadriver" finished-at="2015-02-19T17:34:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDataDriver -->
+        <test-method status="PASS" signature="realse()[pri:0, instance:lesson2.TestMeiTuan_1@44175c06]" name="realse" is-config="true" duration-ms="1282" started-at="2015-02-19T17:34:35Z" finished-at="2015-02-19T17:34:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- realse -->

@@ -5,9 +5,10 @@
     <classes>
       <class name="lesson2.TestMeiTuan_1">
         <methods>
-          <include name="initalAppiumSettings"/>
+          <include name="AndroidSettings"/>
+          <include name="initalTestCaseSettings"/>
           <include name="realse"/>
-          <include name="login"/>
+          <include name="getdynamicElements"/>
         </methods>
       </class> <!-- lesson2.TestMeiTuan_1 -->
     </classes>

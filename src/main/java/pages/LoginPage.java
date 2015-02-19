@@ -10,6 +10,8 @@ public class LoginPage extends PageBase{
 	public String password = "com.sankuai.meituan:id/edit_password";
 	public String login = "com.sankuai.meituan:id/btn_login";
 		
+	
+
 	public LoginPage(AppiumDriver driver){
 		this.driver = driver;
 	}
