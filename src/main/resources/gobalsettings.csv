@@ -1,0 +1,2 @@
+caseid,deviceName,newCommandTimeout,ignoreUnimportantViews,server,timeout,comments
+tc1,Samsung_Galaxy_Note_3,180,true,127.0.0.1:4723,5000,
