@@ -2,9 +2,11 @@ package lesson2;
 
 
 import java.net.MalformedURLException;
+import java.util.List;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,7 +21,7 @@ public class TestMeiTuan_1 extends TestSuite{
 	
 	@BeforeClass
 	public void initalTestCaseSettings() throws MalformedURLException{
-		td = new TestData(System.getProperty("user.dir")+"\\src\\test\\resources\\lesson2\\userinfo.csv");
+		td = new TestData(System.getProperty("user.dir")+"/src/test/resources/lesson2/userinfo.csv");
 
 	}
 	
@@ -27,20 +29,34 @@ public class TestMeiTuan_1 extends TestSuite{
 	@Test(description="使用xpath")
 	public void getGrouponDetails(){
 		
-		driver.findElement(By.xpath("//android.widget.TextView[@text='美食']")).click();
+		String[] args = {"小吃快餐","KTV","美食"};
+		
+		for(int i=0;i<args.length-1;i++){
+		    driver.findElement(By.xpath("//android.widget.TextView[@text='"+args[i]+"']")).click();
+		    
+		    driver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc='小吃快餐, Navigate up']//android.widget.ImageView")).click();
+		}
 		//List<WebElement> elements = driver.findElements(By.id("com.sankuai.meituan:id/title"));		
-		//elements.get(0).click();
-		driver.findElement(By.xpath("//android.widget.FrameLayout[1]/child::android.widget.LinearLayout/android.widget.TextView[@resource-id='com.sankuai.meituan:id/title']")).click();
+		//elements.get(1).click();
+		//WebElement categorylist= driver.findElement(By.xpath("//android.widget.FrameLayout[last()-1]/child::android.widget.LinearLayout/android.widget.TextView[@resource-id='com.sankuai.meituan:id/title']"));
+
+		
+		
+		
 		
 	}
 	
 	
 	
 	@Test(description="动态元素")
-	public void getdynamicElements(){ 
+	public void getdynamicElements() throws InterruptedException{ 
        au.click(By.xpath(homepage.getElement(homepage.category, "美食")));       
        au.click(By.xpath(listitemspage.firstitem));
-       au.click(By.xpath(listitemspage.discount));
+       //au.click(By.xpath(listitemspage.discount));
+       Thread.sleep(3000);
+
+   	   Assert.assertEquals(au.isElementPresented(By.id(groupondetailpage.buy)), true);
+	
 	}
 	
 	
@@ -50,6 +66,7 @@ public class TestMeiTuan_1 extends TestSuite{
 	   au.click(By.xpath(homepage.getElement(homepage.category, "美食")));	       
 	   au.swipe(By.xpath(listitemspage.firstitem), By.xpath(listitemspage.discount),false);
 	   au.click(By.xpath(listitemspage.discount));
+	   au.driver.scrollTo("最新通知");
 	}
 	
 	
@@ -58,6 +75,7 @@ public class TestMeiTuan_1 extends TestSuite{
 	   au.tap(By.xpath(homepage.getElement(homepage.category, "美食")));	       
 	   au.swipe(By.xpath(listitemspage.firstitem), By.xpath(listitemspage.discount),false);
 	   au.tap(By.xpath(listitemspage.discount));
+	  
 	}
 	
 	

@@ -10,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Action {
 
@@ -17,6 +19,7 @@ public class Action {
 	public AppiumDriver driver;
 	public TouchAction au;
 	public Actions ac;
+	private int timeout =20;
 	
 	public Action(AppiumDriver driver){	
 		this.driver = driver;	
@@ -25,7 +28,18 @@ public class Action {
 	}
 	
 	public void click(By by){
-		driver.findElement(by).click();
+		try{
+			driver.findElement(by).click();
+		}catch(Exception e){
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			driver.findElement(by).click();
+		}
+		
 	}
 	
 	/**
@@ -101,6 +115,31 @@ public class Action {
 		}
 		return isDisplayed;
 		
+	}
+	
+	public void waitForElementPresent(By by){
+		try{
+			(new WebDriverWait(driver, timeout)).until(ExpectedConditions.presenceOfElementLocated(by));
+		}catch(Exception e){
+			
+		}
+		
+	}
+	
+
+	
+	
+	public void waitForElementIsEnable(By by){
+		(new WebDriverWait(driver, timeout)).until(ExpectedConditions.elementToBeClickable(by));
+	}
+	
+	public void waitFor(long timeout){
+		try {
+			Thread.sleep(timeout);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	

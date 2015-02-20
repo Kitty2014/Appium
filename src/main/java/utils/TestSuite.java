@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeSuite;
 
+import pages.GroupOnDetailPage;
 import pages.HomePage;
 import pages.ListItemsPage;
 import pages.LoginPage;
@@ -20,6 +21,7 @@ public class TestSuite {
 	public HomePage homepage;
 	public ListItemsPage listitemspage;
 	public LoginPage loginpage;
+	public GroupOnDetailPage groupondetailpage;
 	public Action au;
 	
 	
@@ -43,8 +45,12 @@ public class TestSuite {
 		homepage = new HomePage(driver);		
 		listitemspage = new ListItemsPage(driver);
 		loginpage = new LoginPage(driver);
+		groupondetailpage  = new GroupOnDetailPage(driver);
+		
+
 	}
 	
 	
+
 	
 }
