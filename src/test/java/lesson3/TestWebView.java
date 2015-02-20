@@ -5,6 +5,8 @@ import io.appium.java_client.SwipeElementDirection;
 
 import java.net.MalformedURLException;
 
+import junit.framework.Assert;
+
 import org.openqa.selenium.By;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
@@ -26,7 +28,7 @@ public class TestWebView extends TestSuite{
 	   //au.click(By.xpath("//dl[1]/descendant::a/descendant::div/div[@class='title text-block']"));
        
 	   au.click(By.xpath("//span[text()='送选座券']"));
-	 
+	   Assert.assertEquals(au.isElementPresented(By.xpath("//a[text()='立即购买']")), true);
 	}
 	
 	
