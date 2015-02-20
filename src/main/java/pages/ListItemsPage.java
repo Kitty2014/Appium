@@ -7,7 +7,7 @@ public class ListItemsPage extends PageBase{
 	public AppiumDriver driver;
 	
 	public  String firstitem = "//android.widget.FrameLayout[1]/child::android.widget.LinearLayout/android.widget.TextView[@resource-id='com.sankuai.meituan:id/title']";
-	public String discount = "//android.widget.LinearLayout/android.widget.TextView[@text='¶àÓÅ»Ý+']";
+	public String discount = "//android.widget.LinearLayout/android.widget.TextView[@text='å¤šä¼˜æƒ +']";
 	
 	public ListItemsPage(AppiumDriver driver){
 		this.driver = driver;

@@ -14,18 +14,18 @@ import utils.TestSuite;
 public class TestWebView extends TestSuite{
 	
 
-	@Test(description="²âÊÔbrowser")
+	@Test(description="æµ‹è¯•browser")
 	public  void testBrowser() throws MalformedURLException, InterruptedException {
 	    
 	   driver.get("http://i.meituan.com");
-	   au.waitForElementPresent(By.xpath("//a[contains(text(),'¼ÌĞø·ÃÎÊ´¥ÆÁ°æ')]"));
+	   au.waitForElementPresent(By.xpath("//a[contains(text(),'ç»§ç»­è®¿é—®è§¦å±ç‰ˆ')]"));
 	  
-	   au.click(By.xpath("//a[contains(text(),'¼ÌĞø·ÃÎÊ´¥ÆÁ°æ')]"));	   
-	   au.click(By.xpath("//span[text()='ÃÀÊ³']"));
-	   au.swipe(By.xpath("//dl[1]/descendant::a/descendant::div/div[@class='title text-block']"), By.xpath("//span[text()='ËÍÑ¡×ùÈ¯']"), false);
+	   au.click(By.xpath("//a[contains(text(),'ç»§ç»­è®¿é—®è§¦å±ç‰ˆ')]"));	   
+	   au.click(By.xpath("//span[text()='ç¾é£Ÿ']"));
+	   au.swipe(By.xpath("//dl[1]/descendant::a/descendant::div/div[@class='title text-block']"), By.xpath("//span[text()='é€é€‰åº§åˆ¸']"), false);
 	   //au.click(By.xpath("//dl[1]/descendant::a/descendant::div/div[@class='title text-block']"));
        
-	   au.click(By.xpath("//span[text()='ËÍÑ¡×ùÈ¯']"));
+	   au.click(By.xpath("//span[text()='é€é€‰åº§åˆ¸']"));
 	 
 	}
 	

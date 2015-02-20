@@ -8,7 +8,7 @@ public class HomePage extends PageBase{
 	
 	public  String category = "//android.widget.TextView[@text='%1$s']";
 	
-	public String mine = "//android.widget.TextView[@text='ÎÒµÄ']";
+	public String mine = "//android.widget.TextView[@text='æˆ‘çš„']";
 	
 	public String login = "com.sankuai.meituan:id/login";
 	public String balance = "com.sankuai.meituan:id/balance";
@@ -16,7 +16,7 @@ public class HomePage extends PageBase{
 	
 	
 	public MyAccountPage myaccountpage = new MyAccountPage();
-	//²ÂÄãÏ²»¶
+	//çŒœä½ å–œæ¬¢
 	public String favoriteFirst = "//android.widget.FrameLayout[1]/child::android.widget.TextView[@resource-id='com.sankuai.meituan:id/brand']";
 		
 	public HomePage(AppiumDriver driver){
@@ -27,7 +27,7 @@ public class HomePage extends PageBase{
 	public class MyAccountPage{
 		
 		public String exit = "com.sankuai.meituan:id/logout";
-		public String logout = "//android.widget.Button[@text='ÍË³ö']";
+		public String logout = "//android.widget.Button[@text='é€€å‡º']";
 		
 		
 	}

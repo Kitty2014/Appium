@@ -26,15 +26,15 @@ public class TestMeiTuan_1 extends TestSuite{
 	}
 	
 	
-	@Test(description="Ê¹ÓÃxpath")
+	@Test(description="ä½¿ç”¨xpath")
 	public void getGrouponDetails(){
 		
-		String[] args = {"Ğ¡³Ô¿ì²Í","KTV","ÃÀÊ³"};
+		String[] args = {"å°åƒå¿«é¤","KTV","ç¾é£Ÿ"};
 		
 		for(int i=0;i<args.length-1;i++){
 		    driver.findElement(By.xpath("//android.widget.TextView[@text='"+args[i]+"']")).click();
 		    
-		    driver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc='Ğ¡³Ô¿ì²Í, Navigate up']//android.widget.ImageView")).click();
+		    driver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc='å°åƒå¿«é¤, Navigate up']//android.widget.ImageView")).click();
 		}
 		//List<WebElement> elements = driver.findElements(By.id("com.sankuai.meituan:id/title"));		
 		//elements.get(1).click();
@@ -48,9 +48,9 @@ public class TestMeiTuan_1 extends TestSuite{
 	
 	
 	
-	@Test(description="¶¯Ì¬ÔªËØ")
+	@Test(description="åŠ¨æ€å…ƒç´ ")
 	public void getdynamicElements() throws InterruptedException{ 
-       au.click(By.xpath(homepage.getElement(homepage.category, "ÃÀÊ³")));       
+       au.click(By.xpath(homepage.getElement(homepage.category, "ç¾é£Ÿ")));       
        au.click(By.xpath(listitemspage.firstitem));
        //au.click(By.xpath(listitemspage.discount));
        Thread.sleep(3000);
@@ -63,16 +63,16 @@ public class TestMeiTuan_1 extends TestSuite{
 	
 	@Test(description="swipe")
 	public void testSwipe(){
-	   au.click(By.xpath(homepage.getElement(homepage.category, "ÃÀÊ³")));	       
+	   au.click(By.xpath(homepage.getElement(homepage.category, "ç¾é£Ÿ")));	       
 	   au.swipe(By.xpath(listitemspage.firstitem), By.xpath(listitemspage.discount),false);
 	   au.click(By.xpath(listitemspage.discount));
-	   au.driver.scrollTo("×îĞÂÍ¨Öª");
+	   au.driver.scrollTo("æœ€æ–°é€šçŸ¥");
 	}
 	
 	
 	@Test(description="tap")
 	public void testTap(){
-	   au.tap(By.xpath(homepage.getElement(homepage.category, "ÃÀÊ³")));	       
+	   au.tap(By.xpath(homepage.getElement(homepage.category, "ç¾é£Ÿ")));	       
 	   au.swipe(By.xpath(listitemspage.firstitem), By.xpath(listitemspage.discount),false);
 	   au.tap(By.xpath(listitemspage.discount));
 	  
@@ -83,7 +83,7 @@ public class TestMeiTuan_1 extends TestSuite{
 	public void testDragAndDrop() throws InterruptedException {	   
 	   au.categorySwipe(By.xpath(homepage.getElement(homepage.category, "KTV")));	
 	   Thread.sleep(3000);
-	   au.click(By.xpath(homepage.getElement(homepage.category, "Éú»î·şÎñ")));
+	   au.click(By.xpath(homepage.getElement(homepage.category, "ç”Ÿæ´»æœåŠ¡")));
 	}
 	
 	@Test(description="login")
