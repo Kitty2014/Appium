@@ -94,6 +94,11 @@ public class Action {
 	}
 	
 	
+	
+	public void back(){
+		driver.sendKeyEvent(AndroidKeyCode.BACK);
+	}
+	
 	public void categorySwipe(By source){
 		
 		WebElement start = driver.findElement(source);		

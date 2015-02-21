@@ -31,10 +31,10 @@ public class TestMeiTuan_1 extends TestSuite{
 		
 		String[] args = {"小吃快餐","KTV","美食"};
 		
-		for(int i=0;i<args.length-1;i++){
+		for(int i=0;i<args.length;i++){
 		    driver.findElement(By.xpath("//android.widget.TextView[@text='"+args[i]+"']")).click();
 		    
-		    driver.findElement(By.xpath("//android.widget.LinearLayout[@content-desc='小吃快餐, Navigate up']//android.widget.ImageView")).click();
+		    au.back();
 		}
 		//List<WebElement> elements = driver.findElements(By.id("com.sankuai.meituan:id/title"));		
 		//elements.get(1).click();

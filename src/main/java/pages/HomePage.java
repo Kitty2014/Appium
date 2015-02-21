@@ -6,7 +6,7 @@ public class HomePage extends PageBase{
 
 	public AppiumDriver driver;
 	
-	public  String category = "//android.widget.TextView[@text='%1$s']";
+	public  String category = "//android.widget.TextView[@text='%1$s']|//span[text()='%1$s']";
 	
 	public String mine = "//android.widget.TextView[@text='我的']";
 	

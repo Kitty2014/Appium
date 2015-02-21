@@ -40,6 +40,7 @@
             <excludes>
                  <exclude>lesson1/TestCalculator.java</exclude>
                  <exclude>lesson2/TestMeiTuan_1.java</exclude>
+                 <exclude>lesson3/TestWebView.java</exclude>
             </excludes>
          </configuration>
          </plugin>
